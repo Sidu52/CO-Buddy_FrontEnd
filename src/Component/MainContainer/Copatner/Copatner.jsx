@@ -174,6 +174,7 @@ export default function Copatner() {
     // axios.get("http://localhost:4000/coBuddyData")
     axios.get("https://co-buddy-6sgq.onrender.com/coBuddyData")
       .then(response => {
+         console.log("Sonu",response.data.data);
         setFeeds(response.data.data);
         console.log("SS", response.data.data)
       })
