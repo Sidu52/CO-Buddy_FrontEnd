@@ -72,7 +72,7 @@ const UserDetailsForm = () => {
   const [date, setDate] = useState('');
   const [number, setNumber] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formJSON = JSON.stringify({
       name: name,
@@ -82,7 +82,7 @@ const UserDetailsForm = () => {
 
     })
     // const socket = io('http://localhost:8000');
-    axios.post("https://co-buddy-6sgq.onrender.com/coBuddyData", formJSON, {
+    await axios.post("https://co-buddy-6sgq.onrender.com/coBuddyData", formJSON, {
       // axios.post("http://localhost:4000/coBuddyData", formJSON, {
       headers: {
         'Content-Type': 'application/json'

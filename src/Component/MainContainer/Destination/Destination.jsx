@@ -5,18 +5,24 @@ import cityName from '../../../Data/CityName';
 const Heading = styled.p`
   text-align: center;
   margin-bottom: 20px;
-  color: #353534;
+  color: rgb(53, 53, 52);
   font-size: 2rem;
   text-decoration: underline;
   text-underline-offset: 10px;
   text-transform: capitalize;
+  position: sticky;
+  top: -5px;
+  z-index: 1;
+  padding: 13px;
+  background: white;
 `;
 
 const DataContainer = styled.div`
   margin: 5%;
   max-height: 600px;
   overflow-y: scroll;
-
+  border:1px solid black;
+  padding:5px;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -24,18 +30,6 @@ const DataContainer = styled.div`
   /* Hide the scrollbar for Firefox */
   scrollbar-width: none;
   -ms-overflow-style: none;
-
-  @media only screen and (max-width: 1200px) {
-    width: 30%;
-  }
-
-  @media only screen and (max-width: 853px) {
-    width: 45%;
-  }
-
-  @media only screen and (max-width: 570px) {
-    width: 90%;
-  }
 `;
 
 const Container = styled.div`

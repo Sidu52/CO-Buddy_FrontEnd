@@ -121,6 +121,53 @@ const Button = styled.button`
     transform: translateY(2px);
   }
 `
+// export default function Copatner() {
+//   const [Feeds, setFeeds] = useState([]);
+//   useEffect(() => {
+//     // axios.get("http://localhost:4000/coBuddyData")
+//     axios.get("https://co-buddy-6sgq.onrender.com/coBuddyData")
+//       .then(response => {
+//         setFeeds(response.data.data);
+//         console.log("SS", response.data.data)
+//       })
+//       .catch(error => {
+//         console.log(error);
+//       });
+//   }, []);
+
+//   return (
+//     <div style={{ margin: "5%" }}>
+//       <Heading>Co-Patners</Heading>
+//       <div style={{ display: "flex", flexWrap: "wrap" }}>
+//         {Feeds.map((feed, index) => (
+//           <DataContainer key={index}>
+//             <UserProfile src={`https://source.unsplash.com/random/?${feed.name}`} alt="user image " />
+//             <Container>
+//               <Image src={`https://source.unsplash.com/random/?${feed.destination}`} alt="Goa" />
+//               <Tagcontainer>
+//                 <PTag><i className="uil uil-location-point"></i>{feed.destination}</PTag>
+//               </Tagcontainer>
+//             </Container>
+//             <DetailConataier>
+//               <div>
+//                 <ContainerDetail>{feed.name}</ContainerDetail>
+//                 <p style={{ color: "#707070" }}><i class="uil uil-calling"> </i>{feed.number}</p>
+
+//               </div>
+//               <div>
+//                 <p style={{ color: "#707070" }}>{feed.date.slice(0, 10)}</p>
+//                 <Button>Sss</Button>
+//               </div>
+//             </DetailConataier>
+//           </DataContainer>
+
+//         ))}
+
+//       </div>
+//     </div>
+//   );
+// }
+
 export default function Copatner() {
   const [Feeds, setFeeds] = useState([]);
   useEffect(() => {
